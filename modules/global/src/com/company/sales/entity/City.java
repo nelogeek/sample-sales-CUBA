@@ -9,6 +9,9 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
+//TODO Add new entity "autoservice" and add assotiation
+
+
 @Table(name = "SALES_CITY")
 @Entity(name = "sales_City")
 @NamePattern("%s|name")
