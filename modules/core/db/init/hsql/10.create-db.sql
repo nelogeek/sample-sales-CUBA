@@ -83,7 +83,7 @@ create table SALES_CITY (
     DELETED_BY varchar(50),
     --
     NAME varchar(255) not null,
-    PHONE_NUMBER decimal(19, 2) not null,
+    PHONE_NUMBER varchar(255) not null,
     --
     primary key (ID)
 )^

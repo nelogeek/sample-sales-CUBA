@@ -7,9 +7,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.math.BigDecimal;
-
-//TODO Add new entity "autoservice" and add assotiation
 
 
 @Table(name = "SALES_CITY")
@@ -22,16 +19,16 @@ public class City extends StandardEntity {
     @Column(name = "NAME", nullable = false)
     private String name;
 
-    @NotNull
     @Column(name = "PHONE_NUMBER", nullable = false, unique = true)
-    private BigDecimal phone_number;
+    @NotNull
+    private String phone_number;
 
-    public BigDecimal getPhone_number() {
-        return phone_number;
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
     }
 
-    public void setPhone_number(BigDecimal phone_number) {
-        this.phone_number = phone_number;
+    public String getPhone_number() {
+        return phone_number;
     }
 
     public String getName() {
