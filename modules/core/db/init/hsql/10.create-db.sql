@@ -101,8 +101,8 @@ create table SALES_AUTOSERVICE (
     --
     NAME varchar(255) not null,
     ADDRESS varchar(255) not null,
-    PHONE varchar(255) not null,
-    CITY_ID varchar(36) not null,
+    PHONE varchar(255),
+    CITY_ID varchar(36),
     --
     primary key (ID)
 )^
