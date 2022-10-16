@@ -19,8 +19,7 @@ public class City extends StandardEntity {
     @Column(name = "NAME", nullable = false)
     private String name;
 
-    @Column(name = "PHONE_NUMBER", nullable = false, unique = true)
-    @NotNull
+    @Column(name = "PHONE_NUMBER")
     private String phone_number;
 
     public void setPhone_number(String phone_number) {
