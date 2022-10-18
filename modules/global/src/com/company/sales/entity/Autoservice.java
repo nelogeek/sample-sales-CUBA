@@ -5,6 +5,7 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Table(name = "SALES_AUTOSERVICE")
 @Entity(name = "sales_Autoservice")
@@ -16,6 +17,9 @@ public class Autoservice extends StandardEntity {
     @Column(name = "NAME", nullable = false)
     private String name;
 
+    @OneToMany(mappedBy = "autoservice")
+    private List<Employee> employee;
+
     @Column(name = "ADDRESS", nullable = false)
     @NotNull
     private String address;
@@ -26,6 +30,14 @@ public class Autoservice extends StandardEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CITY_ID")
     private City city;
+
+    public List<Employee> getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(List<Employee> employee) {
+        this.employee = employee;
+    }
 
     public City getCity() {
         return city;

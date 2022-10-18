@@ -1,54 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
-        caption="msg://autoserviceBrowse.caption"
-        focusComponent="autoservicesTable"
-        messagesPack="com.company.sales.web.screens.autoservice">
+        caption="msg://employeeBrowse.caption"
+        focusComponent="employeesTable"
+        messagesPack="com.company.sales.web.screens.employee">
     <data readOnly="true">
-        <collection id="autoservicesDc"
-                    class="com.company.sales.entity.Autoservice">
+        <collection id="employeesDc"
+                    class="com.company.sales.entity.Employee">
             <view extends="_local">
-                <property name="employee" view="_minimal">
-                    <property name="last_name"/>
-                </property>
-                <property name="city" view="_minimal"/>
+                <property name="autoservice" view="_minimal"/>
             </view>
-            <loader id="autoservicesDl">
+            <loader id="employeesDl">
                 <query>
-                    <![CDATA[select e from sales_Autoservice e]]>
+                    <![CDATA[select e from sales_Employee e]]>
                 </query>
             </loader>
         </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="autoservicesTable"
+    <layout expand="employeesTable"
             spacing="true">
         <filter id="filter"
-                applyTo="autoservicesTable"
-                dataLoader="autoservicesDl">
+                applyTo="employeesTable"
+                dataLoader="employeesDl">
             <properties include=".*"/>
         </filter>
-        <groupTable id="autoservicesTable"
+        <groupTable id="employeesTable"
                     width="100%"
-                    dataContainer="autoservicesDc">
+                    dataContainer="employeesDc">
             <actions>
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="name"/>
-                <column id="address"/>
-                <column id="phone"/>
-                <column id="city"/>
+                <column id="last_name"/>
+                <column id="first_name"/>
+                <column id="autoservice"/>
+                <column id="birthday"/>
+                <column id="salary"/>
+                <column id="email"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="autoservicesTable.create"/>
-                <button id="editBtn" action="autoservicesTable.edit"/>
-                <button id="removeBtn" action="autoservicesTable.remove"/>
+                <button id="createBtn" action="employeesTable.create"/>
+                <button id="editBtn" action="employeesTable.edit"/>
+                <button id="removeBtn" action="employeesTable.remove"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

@@ -9,5 +9,6 @@
         <class>com.company.sales.entity.OrderLine</class>
         <class>com.company.sales.entity.City</class>
         <class>com.company.sales.entity.Autoservice</class>
+        <class>com.company.sales.entity.Employee</class>
     </persistence-unit>
 </persistence>

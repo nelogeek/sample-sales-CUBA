@@ -107,3 +107,24 @@ create table SALES_AUTOSERVICE (
     primary key (ID)
 )^
 -- end SALES_AUTOSERVICE
+-- begin SALES_EMPLOYEE
+create table SALES_EMPLOYEE (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    LAST_NAME varchar(255) not null,
+    FIRST_NAME varchar(255) not null,
+    AUTOSERVICE_ID varchar(36),
+    BIRTHDAY date,
+    SALARY decimal(19, 2),
+    EMAIL varchar(255),
+    --
+    primary key (ID)
+)^
+-- end SALES_EMPLOYEE
