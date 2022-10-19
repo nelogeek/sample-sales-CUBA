@@ -10,5 +10,6 @@
         <class>com.company.sales.entity.City</class>
         <class>com.company.sales.entity.Autoservice</class>
         <class>com.company.sales.entity.Employee</class>
+        <class>com.company.sales.entity.Repair</class>
     </persistence-unit>
 </persistence>

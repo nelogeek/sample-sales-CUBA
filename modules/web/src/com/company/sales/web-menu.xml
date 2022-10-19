@@ -8,5 +8,6 @@
         <item screen="sales_City.browse" caption="mainMsg://menu_config.sales_City.browse"/>
         <item screen="sales_Autoservice.browse" caption="mainMsg://menu_config.sales_Autoservice.browse"/>
         <item screen="sales_Employee.browse" caption="mainMsg://menu_config.sales_Employee.browse"/>
+        <item screen="sales_Repair.browse" caption="mainMsg://menu_config.sales_Repair.browse"/>
     </menu>
 </menu-config>

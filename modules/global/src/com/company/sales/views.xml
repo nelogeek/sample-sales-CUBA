@@ -25,4 +25,5 @@
             <property name="numberOfSpecialProducts"/>
         </property>
     </view>
+    <view entity="sales_Repair" name="repair-editView" extends="_local"/>
 </views>
