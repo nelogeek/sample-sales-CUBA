@@ -8,8 +8,11 @@
         <collection id="autoservicesDc"
                     class="com.company.sales.entity.Autoservice">
             <view extends="_local">
-                <property name="employee" view="_minimal">
-                    <property name="last_name"/>
+                <property name="employees" view="_minimal">
+                    <property name="first_name"/>
+                    <property name="birthday"/>
+                    <property name="salary"/>
+                    <property name="email"/>
                 </property>
                 <property name="city" view="_minimal"/>
             </view>

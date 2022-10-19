@@ -1,7 +1,10 @@
 package com.company.sales.entity;
 
+import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -18,7 +21,9 @@ public class Autoservice extends StandardEntity {
     private String name;
 
     @OneToMany(mappedBy = "autoservice")
-    private List<Employee> employee;
+    @OnDelete(DeletePolicy.CASCADE)
+    @Composition
+    protected List<Employee> employees;
 
     @Column(name = "ADDRESS", nullable = false)
     @NotNull
@@ -31,12 +36,12 @@ public class Autoservice extends StandardEntity {
     @JoinColumn(name = "CITY_ID")
     private City city;
 
-    public List<Employee> getEmployee() {
-        return employee;
+    public List<Employee> getEmployees() {
+        return employees;
     }
 
-    public void setEmployee(List<Employee> employee) {
-        this.employee = employee;
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
     }
 
     public City getCity() {
