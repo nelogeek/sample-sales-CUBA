@@ -33,8 +33,9 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
+                <column id="default_city"/>
                 <column id="name"/>
-                <column id="phone_number"/>
+                <column id="code"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

@@ -6,7 +6,6 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 
 @Table(name = "SALES_CITY")
@@ -15,19 +14,33 @@ import javax.validation.constraints.NotNull;
 public class City extends StandardEntity {
     private static final long serialVersionUID = 8967926253253479965L;
 
-    @NotNull
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "NAME")
     private String name;
 
-    @Column(name = "PHONE_NUMBER")
-    private String phone_number;
+    @Column(name = "DEFAULT_CITY")
+    private Boolean default_city;
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    @Column(name = "CODE")
+    private Integer code;
+
+    public Integer getCode() {
+        return code;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public void setDefault_city(Boolean default_city) {
+        this.default_city = default_city;
+    }
+
+    public Boolean getDefault_city() {
+        return default_city;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public Integer getPhone_number() {
+        return code;
     }
 
     public String getName() {

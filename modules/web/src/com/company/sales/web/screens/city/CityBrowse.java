@@ -7,5 +7,9 @@ import com.company.sales.entity.City;
 @UiDescriptor("city-browse.xml")
 @LookupComponent("citiesTable")
 @LoadDataBeforeShow
+
 public class CityBrowse extends StandardLookup<City> {
+
+
+
 }

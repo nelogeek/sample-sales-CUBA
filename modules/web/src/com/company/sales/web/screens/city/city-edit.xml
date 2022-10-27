@@ -15,8 +15,9 @@
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="cityDc">
             <column width="350px">
+                <checkBox id="default_cityField" property="default_city"/>
                 <textField id="nameField" property="name"/>
-                <maskedField id="phone_numberField" property="phone_number" mask="+#-(###)-###-##-##" valueMode="masked"/>
+                <textField id="codeField" property="code"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

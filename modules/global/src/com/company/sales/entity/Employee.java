@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Table(name = "SALES_EMPLOYEE")
 @Entity(name = "sales_Employee")
-@NamePattern("%s|last_name")
+@NamePattern("%s %s|last_name,first_name")
 public class Employee extends StandardEntity {
     private static final long serialVersionUID = -9039757987005485482L;
 

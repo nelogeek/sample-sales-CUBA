@@ -18,12 +18,12 @@ public class Repair extends StandardEntity {
 
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "clear"})
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AUTOSERVICE_ID")
+    @JoinColumn(name = "AUTOSERVICE")
     private Autoservice autoservice;
 
     @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "clear"})
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "EMPLOYEE_ID")
+    @JoinColumn(name = "EMPLOYEE")
     private Employee employee;
 
     public void setEmployee(Employee employee) {
@@ -33,6 +33,8 @@ public class Repair extends StandardEntity {
     public Employee getEmployee() {
         return employee;
     }
+
+
 
     public Autoservice getAutoservice() {
         return autoservice;

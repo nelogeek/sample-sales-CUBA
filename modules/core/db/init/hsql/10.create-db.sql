@@ -82,8 +82,9 @@ create table SALES_CITY (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    NAME varchar(255) not null,
-    PHONE_NUMBER varchar(255) not null,
+    NAME varchar(255),
+    DEFAULT_CITY boolean,
+    CODE integer,
     --
     primary key (ID)
 )^
@@ -140,8 +141,8 @@ create table SALES_REPAIR (
     DELETED_BY varchar(50),
     --
     NAME varchar(255),
-    AUTOSERVICE_ID varchar(36),
-    EMPLOYEE_ID varchar(36),
+    AUTOSERVICE varchar(36),
+    EMPLOYEE varchar(36),
     --
     primary key (ID)
 )^

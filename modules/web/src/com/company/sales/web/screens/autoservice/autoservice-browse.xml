@@ -44,7 +44,9 @@
                 <column id="name"/>
                 <column id="address"/>
                 <column id="phone"/>
-                <column id="city"/>
+                <group>
+                    <column id="city"/>
+                </group>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
