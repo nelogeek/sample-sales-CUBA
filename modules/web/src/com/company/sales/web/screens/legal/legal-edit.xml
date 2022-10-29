@@ -18,7 +18,7 @@
                 <textField id="last_nameField" property="last_name"/>
                 <textField id="first_nameField" property="first_name"/>
                 <dateField id="birthDayField" property="birthDay"/>
-                <textField id="pole_legalField" property="field"/>
+                <textField id="pole_legalField" property="field" caption="msg://Pole"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

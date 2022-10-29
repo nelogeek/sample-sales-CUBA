@@ -10,7 +10,5 @@
         <item screen="sales_Employee.browse" caption="mainMsg://menu_config.sales_Employee.browse"/>
         <item screen="sales_Repair.browse" caption="mainMsg://menu_config.sales_Repair.browse"/>
         <item screen="sales_Person.browse" caption="mainMsg://menu_config.sales_Person.browse"/>
-        <item screen="sales_Legal.browse" caption="mainMsg://menu_config.sales_Legal.browse"/>
-        <item screen="sales_Individuals.browse" caption="mainMsg://menu_config.sales_Individuals.browse"/>
     </menu>
 </menu-config>
