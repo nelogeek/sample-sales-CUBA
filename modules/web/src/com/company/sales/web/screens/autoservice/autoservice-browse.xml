@@ -32,6 +32,15 @@
                 dataLoader="autoservicesDl">
             <properties include=".*"/>
         </filter>
+        <filter id="EmployeeFilter"
+                dataLoader="autoservicesDl">
+            <custom name="Employee"
+                    caption="msg://Employee"
+                    paramClass="java.lang.String"
+                    join="join {E}.employees em">
+                em.last_name like ?
+            </custom>
+        </filter>
         <groupTable id="autoservicesTable"
                     width="100%"
                     dataContainer="autoservicesDc">
