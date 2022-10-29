@@ -147,3 +147,40 @@ create table SALES_REPAIR (
     primary key (ID)
 )^
 -- end SALES_REPAIR
+-- begin SALES_PERSON
+create table SALES_PERSON (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    DTYPE varchar(31),
+    --
+    LAST_NAME varchar(255),
+    FIRST_NAME varchar(255),
+    BIRTH_DAY date,
+    --
+    primary key (ID)
+)^
+-- end SALES_PERSON
+-- begin SALES_INDIVIDUALS
+create table SALES_INDIVIDUALS (
+    ID varchar(36) not null,
+    --
+    POLE_INDIVIDUALS varchar(255),
+    --
+    primary key (ID)
+)^
+-- end SALES_INDIVIDUALS
+-- begin SALES_LEGAL
+create table SALES_LEGAL (
+    ID varchar(36) not null,
+    --
+    POLE_LEGAL varchar(255),
+    --
+    primary key (ID)
+)^
+-- end SALES_LEGAL

@@ -23,3 +23,9 @@ alter table SALES_REPAIR add constraint FK_SALES_REPAIR_EMPLOYEE foreign key (EM
 create index IDX_SALES_REPAIR_AUTOSERVICE on SALES_REPAIR (AUTOSERVICE)^
 create index IDX_SALES_REPAIR_EMPLOYEE on SALES_REPAIR (EMPLOYEE)^
 -- end SALES_REPAIR
+-- begin SALES_INDIVIDUALS
+alter table SALES_INDIVIDUALS add constraint FK_SALES_INDIVIDUALS_ID foreign key (ID) references SALES_PERSON(ID)^
+-- end SALES_INDIVIDUALS
+-- begin SALES_LEGAL
+alter table SALES_LEGAL add constraint FK_SALES_LEGAL_ID foreign key (ID) references SALES_PERSON(ID)^
+-- end SALES_LEGAL

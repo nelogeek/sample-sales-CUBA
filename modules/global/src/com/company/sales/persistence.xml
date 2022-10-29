@@ -11,5 +11,8 @@
         <class>com.company.sales.entity.Autoservice</class>
         <class>com.company.sales.entity.Employee</class>
         <class>com.company.sales.entity.Repair</class>
+        <class>com.company.sales.entity.Person</class>
+        <class>com.company.sales.entity.Individuals</class>
+        <class>com.company.sales.entity.Legal</class>
     </persistence-unit>
 </persistence>
